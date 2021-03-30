@@ -7,8 +7,8 @@ BIN = clipfs
 ALL_DEP_FILES = $(patsubst %.c,%.d,$(wildcard *.c))
 OBJ = $(patsubst %.c,%.o,$(wildcard *.c))
 
-CFLAGS += $(shell pkg-config x11 fuse3 --cflags)
-LDFLAGS += $(shell pkg-config x11 fuse3 --libs)
+CFLAGS += $(shell pkg-config x11 fuse3 xmu --cflags)
+LDFLAGS += $(shell pkg-config x11 fuse3 xmu --libs)
 
 .PHONY: all clean
 
